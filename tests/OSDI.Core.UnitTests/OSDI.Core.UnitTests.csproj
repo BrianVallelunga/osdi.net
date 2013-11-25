@@ -38,7 +38,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmailAddressTests.cs" />
     <Compile Include="FlexEnumTests.cs" />
+    <Compile Include="PersonTests.cs" />
+    <Compile Include="PhoneNumberTests.cs" />
     <Compile Include="SanityTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

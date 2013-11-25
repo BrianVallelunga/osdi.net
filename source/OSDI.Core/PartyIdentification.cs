@@ -3,7 +3,7 @@
     /// <summary>
     /// Defines political parties.
     /// </summary>
-    public enum PartyIdentity
+    public enum PartyIdentification
     {
         /// <summary>
         /// Not affiliated with a political party.

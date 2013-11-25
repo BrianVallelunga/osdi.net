@@ -68,7 +68,7 @@
         /// <summary>
         /// Gets or sets a value indicating if the phone number can accept SMS text messages.
         /// </summary>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Sms")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Sms", Justification = "Sms is correct")]
         public bool? SmsCapable { get; set; }
     }
 }

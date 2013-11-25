@@ -33,8 +33,10 @@
         /// </summary>
         public Person()
         {
-            this.Addresses = new List<PostalAddress>();
-            this.Emails = new List<EmailAddress>();
+            this.EmailAddresses = new List<EmailAddress>();
+            this.LanguagesSpoken = new HashSet<string>();
+            this.PhoneNumbers = new HashSet<PhoneNumber>();
+            this.PostalAddresses = new List<PostalAddress>();
             this.Profiles = new List<Profile>();
         }
 
@@ -44,11 +46,6 @@
         public string AdditionalName { get; set; }
 
         /// <summary>
-        /// Gets the addresses of the person.
-        /// </summary>
-        public ICollection<PostalAddress> Addresses { get; private set; }
-
-        /// <summary>
         /// Gets or sets the birthdate of the person.
         /// </summary>
         public Birthdate Birthdate { get; set; }
@@ -56,7 +53,7 @@
         /// <summary>
         /// Gets the email addresses of the person.
         /// </summary>
-        public ICollection<EmailAddress> Emails { get; private set; }
+        public ICollection<EmailAddress> EmailAddresses { get; private set; }
 
         /// <summary>
         /// Gets or sets the family name of the person.
@@ -85,6 +82,11 @@
         public string GivenName { get; set; }
 
         /// <summary>
+        /// Gets the unique set of languages spoken by the person as ISO 639 two-digit codes.
+        /// </summary>
+        public ICollection<string> LanguagesSpoken { get; private set; }
+
+        /// <summary>
         /// Gets or sets the prefix of the person.
         /// </summary>
         public string HonorificPrefix { get; set; }
@@ -95,9 +97,19 @@
         public string HonorificSuffix { get; set; }
 
         /// <summary>
-        /// Gets or sets the political party identity of the person.
+        /// Gets or sets the political party identification of the person.
         /// </summary>
-        public PartyIdentity? PartyIdentity { get; set; }
+        public PartyIdentification? PartyIdentification { get; set; }
+
+        /// <summary>
+        /// Gets the set of phone numbers of the person.
+        /// </summary>
+        public ICollection<PhoneNumber> PhoneNumbers { get; private set; }
+
+        /// <summary>
+        /// Gets the addresses of the person.
+        /// </summary>
+        public ICollection<PostalAddress> PostalAddresses { get; private set; }
 
         /// <summary>
         /// Gets the profiles of the person.

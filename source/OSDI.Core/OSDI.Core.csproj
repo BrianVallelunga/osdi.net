@@ -48,6 +48,7 @@
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="PartyIdentification.cs" />
     <Compile Include="PostalAddress.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Birthdate.cs" />
@@ -56,7 +57,6 @@
     <Compile Include="Entity.cs" />
     <Compile Include="FlexEnum.cs" />
     <Compile Include="Identifier.cs" />
-    <Compile Include="PartyIdentity.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="PhoneNumber.cs" />
     <Compile Include="PhoneNumberType.cs" />
