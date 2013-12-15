@@ -4,6 +4,12 @@
 
     public class Entity
     {
+        public Entity()
+        {
+            this.CreatedAt = DateTime.UtcNow;
+            this.ModifiedAt = this.CreatedAt;
+        }
+
         /// <summary>
         /// The date the entity was created.
         /// </summary>

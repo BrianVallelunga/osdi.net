@@ -33,15 +33,15 @@
         /// </summary>
         public Person()
         {
-            this.EmailAddresses = new List<EmailAddress>();
+            this.EmailAddresses = new HashSet<EmailAddress>();
             this.LanguagesSpoken = new HashSet<string>();
             this.PhoneNumbers = new HashSet<PhoneNumber>();
-            this.PostalAddresses = new List<PostalAddress>();
-            this.Profiles = new List<Profile>();
+            this.PostalAddresses = new HashSet<PostalAddress>();
+            this.Profiles = new HashSet<Profile>();
         }
 
         /// <summary>
-        /// Gets or sets the additional name of the person; a middle name.
+        /// Gets or sets the additional name of the person; often, a middle name.
         /// </summary>
         public string AdditionalName { get; set; }
 
@@ -54,6 +54,16 @@
         /// Gets the email addresses of the person.
         /// </summary>
         public ICollection<EmailAddress> EmailAddresses { get; private set; }
+
+        /// <summary>
+        /// Gets or sets the employer of the person.
+        /// </summary>
+        public string Employer { get; set; }
+
+        /// <summary>
+        /// Gets or sets the ethnicity of the person.
+        /// </summary>
+        public string Ethnicity { get; set; }
 
         /// <summary>
         /// Gets or sets the family name of the person.
@@ -82,11 +92,6 @@
         public string GivenName { get; set; }
 
         /// <summary>
-        /// Gets the unique set of languages spoken by the person as ISO 639 two-digit codes.
-        /// </summary>
-        public ICollection<string> LanguagesSpoken { get; private set; }
-
-        /// <summary>
         /// Gets or sets the prefix of the person.
         /// </summary>
         public string HonorificPrefix { get; set; }
@@ -95,6 +100,11 @@
         /// Gets or sets the honorific suffix of the person.
         /// </summary>
         public string HonorificSuffix { get; set; }
+
+        /// <summary>
+        /// Gets the unique set of languages spoken by the person as ISO 639 two-digit codes.
+        /// </summary>
+        public ICollection<string> LanguagesSpoken { get; private set; }
 
         /// <summary>
         /// Gets or sets the political party identification of the person.
@@ -115,6 +125,11 @@
         /// Gets the profiles of the person.
         /// </summary>
         public ICollection<Profile> Profiles { get; private set; }
+
+        /// <summary>
+        /// Gets or sets the occupation of the person.
+        /// </summary>
+        public string Occupation { get; set; }
 
         /// <summary>
         /// Gets or sets the source of where the person was acquired.

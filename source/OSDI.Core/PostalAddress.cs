@@ -61,11 +61,11 @@
         /// Gets the address lines.
         /// </summary>
         public ICollection<string> AddressLines { get; private set; }
-
+        
         /// <summary>
-        /// Gets or sets the address status.
+        /// Gets or sets the address type.
         /// </summary>
-        public PostalAddressStatus? Status { get; set; }
+        public PostalAddressType? AddressType { get; set; }
 
         /// <summary>
         /// Gets or sets the country code.
@@ -98,8 +98,9 @@
         public string Region { get; set; }
 
         /// <summary>
-        /// Gets or sets the address type.
+        /// Gets or sets the address status.
         /// </summary>
-        public PostalAddressType? PostalAddressType { get; set; }
+        public PostalAddressStatus? Status { get; set; }
+
     }
 }

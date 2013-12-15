@@ -7,7 +7,7 @@
     /// </summary>
     public sealed class EmailAddress
     {
-        public EmailAddress(string address, EmailAddressType emailAddressType)
+        public EmailAddress(string address, EmailAddressType addressType, bool primary = false)
         {
             if (string.IsNullOrWhiteSpace(address))
             {
@@ -15,7 +15,8 @@
             }
 
             this.Address = address;
-            this.EmailAddressType = emailAddressType;
+            this.AddressType = addressType;
+            this.Primary = primary;
         }
 
         /// <summary>
@@ -24,9 +25,14 @@
         public string Address { get; private set; }
 
         /// <summary>
-        /// Gets the type of the email.
+        /// Gets the type of the email address.
         /// </summary>
-        public EmailAddressType EmailAddressType { get; private set; }
+        public EmailAddressType AddressType { get; private set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating if this is the primary email address.
+        /// </summary>
+        public bool Primary { get; private set; }
 
         public override bool Equals(object obj)
         {
@@ -39,12 +45,12 @@
 
             if (string.Equals(this.Address, other.Address))
             {
-                if (this.EmailAddressType == null && other.EmailAddressType == null)
+                if (this.AddressType == null && other.AddressType == null)
                 {
                     return true;
                 }
 
-                return object.Equals(this.EmailAddressType, other.EmailAddressType);
+                return object.Equals(this.AddressType, other.AddressType);
             }
 
             return false;
@@ -52,7 +58,7 @@
 
         public override int GetHashCode()
         {
-            return this.Address.GetHashCode() ^ (this.EmailAddressType != null ? this.EmailAddressType.GetHashCode() : 0);
+            return this.Address.GetHashCode() ^ (this.AddressType != null ? this.AddressType.GetHashCode() : 0);
         }
     }
 }

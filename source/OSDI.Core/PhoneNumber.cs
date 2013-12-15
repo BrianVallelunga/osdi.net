@@ -58,7 +58,7 @@
         /// <summary>
         /// Gets or sets the phone type.
         /// </summary>
-        public PhoneNumberType PhoneNumberType { get; set; }
+        public PhoneNumberType NumberType { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether this is the primary phone number.
