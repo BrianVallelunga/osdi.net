@@ -9,7 +9,7 @@
         {
             if (string.IsNullOrWhiteSpace(value))
             {
-                throw new ArgumentException("FlexEnumeration value is not valid");
+                throw new ArgumentException("FlexEnumeration value is not valid", "value");
             }
 
             this.Value = value;
@@ -41,7 +41,7 @@
                 return false;
             }
 
-            return string.Equals(this.Value, other.Value);
+            return string.Equals(this.Value, other.Value, StringComparison.InvariantCultureIgnoreCase);
         }
 
         public bool Equals(FlexEnum other)
@@ -51,7 +51,7 @@
                 return false;
             }
 
-            return string.Equals(this.Value, other.Value);
+            return string.Equals(this.Value, other.Value, StringComparison.InvariantCultureIgnoreCase);
         }
 
         public override string ToString()
